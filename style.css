@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: rgb(27, 16, 16);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
+
+.card {
+  height: 80vh;
+  border-radius: 1rem;
+  position: relative;
+  flex: 0.2;
+  cursor: pointer;
+  transition: all 0.6s linear;
+  box-shadow: 7px 7px 5px rgba(88, 88, 88, 0.5),
+    -7px -7px 5px rgba(88, 88, 88, 0.5);
+}
+.card.active {
+  flex: 3;
+}
+
+.card1 {
+  background: url("https://source.unsplash.com/1600x900/?nature,bird") no-repeat
+    center;
+  margin: 12px;
+  background-size: cover;
+}
+.card2 {
+  background: url("https://source.unsplash.com/1600x900/?nature,rain") no-repeat
+    center;
+  margin: 12px;
+  background-size: cover;
+}
+.card3 {
+  background: url("https://source.unsplash.com/1600x900/?nature,animal")
+    no-repeat center;
+  margin: 12px;
+  background-size: cover;
+}
+.card4 {
+  background: url("https://source.unsplash.com/1600x900/?nature,water")
+    no-repeat center;
+  margin: 12px;
+  background-size: cover;
+}
+.card5 {
+  background: url("https://source.unsplash.com/1600x900/?nature,trees")
+    no-repeat center;
+  background-size: cover;
+}
+
+.card h2 {
+  color: #fff;
+  position: absolute;
+  bottom: 22px;
+  left: 15px;
+  opacity: 0;
+  text-transform: capitalize;
+  transition: opacity 0.7s ease-in;
+}
+.card.active h2 {
+  opacity: 1;
+}
